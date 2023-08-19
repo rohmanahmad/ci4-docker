@@ -1,0 +1,9 @@
+FROM rohmanahmad/php-for-ci:1.0.0
+
+WORKDIR /var/www/html/app
+
+COPY . /var/www/html/app/
+
+EXPOSE 80
+
+CMD /usr/sbin/apache2ctl -D FOREGROUND
